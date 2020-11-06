@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/model-view-controller-lab.iml" filepath="$PROJECT_DIR$/model-view-controller-lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-3-model-view-controller-lab.iml" filepath="$PROJECT_DIR$/java-3-model-view-controller-lab.iml" />
     </modules>
   </component>
 </project>
