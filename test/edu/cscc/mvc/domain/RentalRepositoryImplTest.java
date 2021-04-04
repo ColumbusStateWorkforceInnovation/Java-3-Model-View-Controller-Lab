@@ -65,6 +65,20 @@ class RentalRepositoryImplTest {
         assertTrue(repository.readAll().isEmpty());
     }
 
+    @Test
+    public void itCanDeleteARentalAfterBeingUpdated() {
+        Rental rental = repository.create(createDefaultRental());
+        rental.setName("Alien");
+        rental.setFormat(Format.VHS);
+        rental.setDirector("Ridley Scott");
+        rental.setYear("1976");
+        Rental updated = repository.update(rental);
+
+        repository.delete(updated.getId());
+
+        assertTrue(repository.readAll().isEmpty());
+    }
+
     private Rental createDefaultRental() {
         Rental rental = new Rental("Rocky Horror Picture Show", Format.DVD, Genre.COMEDY, "Jim Sharman", "1975");
         return rental;

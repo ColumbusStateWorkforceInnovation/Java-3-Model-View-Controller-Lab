@@ -84,16 +84,12 @@ public class Rental {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Rental rental = (Rental) o;
-        return Objects.equals(name, rental.name) &&
-                format == rental.format &&
-                genre == rental.genre &&
-                Objects.equals(director, rental.director) &&
-                Objects.equals(year, rental.year);
+        return Objects.equals(id, rental.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, format, genre, director, year);
+        return Objects.hash(id);
     }
 
     @Override
